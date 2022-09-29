@@ -1,43 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Menampilkan Dan Menyembunyikan Element Dengan JavaScript</title>
-</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").slideToggle();
+  });
+});
+</script>
 <style>
-.container{
+  .container{
 background: #fff;
 width: 40%;
-margin:auto;	
-}	
+margin:auto;  
+} 
 #elemen{
 background: #222;
 color: #fff;
-padding: 10px;	
+padding: 10px;  
 }
 button{
 background: blue;
 border-radius: 5px;
 padding: 10px;
-color:#fff;	
+color:#fff; 
 }
 </style>
 <body>
-<div class="container">
-<button onclick="toggleElement()">Effect-sliding</button>
-<div id="elemen">
-  Efek slide adalah efek kemunculan sebuah elemen HTML dengan cara turun dari atas kebawah. Untuk membuat efek ini, jQuery menyediakan 2 buah method: slideUp () dan slideDown ()
-</div> 
-</div>
+<button onclick="toggleElement()">Effects-Sliding</button>  
+<p>Efek slide adalah efek kemunculan sebuah elemen HTML dengan cara turun dari atas kebawah. Untuk membuat efek ini, jQuery menyediakan 2 buah method: slideUp() dan slideDown()</p>
+</head>
 </body>
-<script>
-function toggleElement() {
-    var x = document.getElementById("elemen");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-} 	
-</script>
+
+
+</body>
 </html>
